@@ -8,13 +8,21 @@
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
 		<style>
 			#wrap { width: 900px; margin: 0 auto; }
+			#search { 
+				width: 100%;
+				float: left;	
+			}
 			.tab-content { 
 				border-color: transparent #DDDDDD #DDDDDD #DDDDDD;
     			border-style: solid;
     			border-width: 1px;
     			padding: 0 5px;
+    			min-height: 500px;
 			}
-			
+			#load-gif {
+				width: 16px;
+				height: 16px;
+				display: inline-block;
 		</style>
 		<style ></style>
 		<title>Work203</title>
@@ -23,30 +31,49 @@
 		<div id="wrap">
 			<h1>Work203</h1>
 			<p>av Pontus Alm</p>
-			<form class="well form-search">
-				<input type="text" id="searchfield" class="input-medium search-query" />
-				<button type="submit" id="searchbutton" class="btn">Sök!</button>
-				<span id="load-gif"></span> 
-			</form>
+			<div id="search">
+				<form class="form-search">
+					<input type="text" id="searchfield" class="input-medium search-query" />
+					<button type="submit" id="searchbutton" class="btn">Sök!</button>
+					<span id="load-gif"></span> 
+				</form>
+			</div>
 			<div class="tabbable"> 
     			<ul class="nav nav-tabs">
-    				<li class="active"><a href="#tab1" data-toggle="tab">Alla</a></li>
-					<li><a href="#tab2" data-toggle="tab">Google</a></li>
-					<li><a href="#tab3" data-toggle="tab">Bing</a></li>
-					<li><a href="#tab4" data-toggle="tab">Yahoo</a></li>
+    				<li class="active"><a href="#all" data-toggle="tab">Alla</a></li>
+					<li><a href="#google" data-toggle="tab">Google</a></li>
+					<li><a href="#bing" data-toggle="tab">Bing</a></li>
+					<li><a href="#yahoo" data-toggle="tab">Yahoo</a></li>
+					<li id="savedSearches"><a href="#saved" data-toggle="tab">Sparade Sökningar</a></li>
     			</ul>
     			<div class="tab-content">
-    				<div class="tab-pane active" id="tab1">
-    					<p>I'm in Section 1.</p>
+    				<div class="tab-pane active" id="all">
+    					<div class="tab-inner-content">
+    						<p>I'm in Section 1.</p>
+    					</div>
     				</div>
-    				<div class="tab-pane" id="tab2">
-    					<p>Howdy, I'm in Section 2.</p>
+    				<div class="tab-pane" id="google">
+    					<div class="tab-inner-content">
+    						<p>Howdy, I'm in Section 2.</p>
+    					</div>
     				</div>
-    				<div class="tab-pane" id="tab3">
-    					<p>Howdy, I'm in Section 3.</p>
+    				<div class="tab-pane" id="bing">
+    					<div class="tab-inner-content">
+    						<p>Howdy, I'm in Section 3.</p>
+    					</div>
     				</div>
-    				<div class="tab-pane" id="tab4">
-    					<p>Howdy, I'm in Section 4.</p>
+    				<div class="tab-pane" id="yahoo">
+    					<div class="tab-inner-content">
+    						<p>Howdy, I'm in Section 4.</p>
+    					</div>
+    				</div>
+    				<div class="tab-pane" id="saved">
+    					<div class="tab-inner-content">
+	    					<p>Howdy, I'm in Section 5.</p>
+	    					<div class="well">
+	    						<button type="submit" id="update" class="btn">Uppdatera!</button>
+	    					</div>
+    					</div>
     				</div>
     			</div>
     		</div>			

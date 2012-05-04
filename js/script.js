@@ -4,19 +4,42 @@ $(function() {
 		event.preventDefault();
 		var text = $('#searchfield');
 		console.log(text.val());
+		
+		// ajax start
+		$('#load-gif').css('background-image', 'url(img/ajax-loader.gif)');
+		
+		newSearch();
+		saveSearch(text.val());
 		text.val('');
 		
-		$('#load-gif').css('background-image', 'url(img/ajax-loader.gif)');
-		//spara ner sökningen i databasen
-		
-		//hämta info från olika sökmotorer
-		
-		// när hämtning är klar ta bort ajax-loader
+		//ajax done
+		$('#load-gif').css('background-image', '');
 		
 	});
 	
 	$('#savedSearches').click(function() {
-		// ladda in sparade sökningar från db
+		getSearches();
+	});
+	
+	$('#update').click(function(event) {
+		event.preventDefault();
+		getSearches();		
 	});
 	
 });
+
+function getSearches() {
+	$.post("api/?/getSearches",
+        function(data) {
+        	$('#saved .tab-inner-content').html(data.getsearch);
+        }, "json");
+}
+
+function newSearch() {
+	console.log("doing new search");
+}
+
+function saveSearch() {
+	console.log("saving search");
+	
+}

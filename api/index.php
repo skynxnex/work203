@@ -19,7 +19,7 @@ $manager	= new Manager();
 $return		= "";
 
 if (method_exists($manager, $action)) {
-    $return = $manager->$action($_POST);
+    $return = $manager->$action();
 } else {
     $return = array('info' => "no such file or function " . $action);
 }

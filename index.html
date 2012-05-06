@@ -33,7 +33,7 @@
 			<p>av Pontus Alm</p>
 			<div id="search">
 				<form class="form-search">
-					<input type="text" id="searchfield" class="input-medium search-query" />
+					<input type="text" id="searchfield" name="searchfield" class="input-medium search-query" />
 					<button type="submit" id="searchbutton" class="btn">Sök!</button>
 					<span id="load-gif"></span> 
 				</form>
@@ -44,35 +44,26 @@
 					<li><a href="#google" data-toggle="tab">Google</a></li>
 					<li><a href="#bing" data-toggle="tab">Bing</a></li>
 					<li><a href="#yahoo" data-toggle="tab">Yahoo</a></li>
-					<li id="savedSearches"><a href="#saved" data-toggle="tab">Sparade Sökningar</a></li>
     			</ul>
     			<div class="tab-content">
     				<div class="tab-pane active" id="all">
     					<div class="tab-inner-content">
-    						<p>I'm in Section 1.</p>
+    						<ul id="allul" class="unstyled"></ul>
     					</div>
     				</div>
     				<div class="tab-pane" id="google">
     					<div class="tab-inner-content">
-    						<p>Howdy, I'm in Section 2.</p>
+    						<ul id="googleul" class="unstyled"></ul>
     					</div>
     				</div>
     				<div class="tab-pane" id="bing">
     					<div class="tab-inner-content">
-    						<p>Howdy, I'm in Section 3.</p>
+    						<ul id="bingul" class="unstyled"></ul>
     					</div>
     				</div>
     				<div class="tab-pane" id="yahoo">
     					<div class="tab-inner-content">
-    						<p>Howdy, I'm in Section 4.</p>
-    					</div>
-    				</div>
-    				<div class="tab-pane" id="saved">
-    					<div class="tab-inner-content">
-	    					<p>Howdy, I'm in Section 5.</p>
-    					</div>
-    					<div class="well">
-    						<button type="submit" id="update" class="btn">Uppdatera!</button>
+    						<ul id="yahooul" class="unstyled"></ul>
     					</div>
     				</div>
     			</div>
